@@ -221,7 +221,7 @@ public class Weapon : MonoBehaviour
             GameObject muzzleFlash = Instantiate(weaponSettings.muzzleFlash, bulletSpawnPos, Quaternion.identity) as GameObject;
             Transform muzzleT = muzzleFlash.transform;
             muzzleT.SetParent(weaponSettings.bulletSpawn);
-            Destroy(muzzleFlash, 2.0f);
+            Destroy(muzzleFlash, 0.2f);
         }
 
         if (weaponSettings.shell)
