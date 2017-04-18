@@ -47,6 +47,7 @@ public class UserInput : MonoBehaviour
         characterMove = GetComponent<CharacterMovement>();
         weaponHandler = GetComponent<WeaponHandler>();
         SetupCrosshairs();
+
     }
 
     void SetupCrosshairs()
@@ -72,6 +73,7 @@ public class UserInput : MonoBehaviour
         CharacterLogic();
         CameraLookLogic();
         WeaponLogic();
+
     }
 
     void LateUpdate()

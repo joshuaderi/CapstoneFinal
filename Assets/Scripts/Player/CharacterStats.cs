@@ -16,6 +16,7 @@ public class CharacterStats : MonoBehaviour
     public GameObject player;
     public Slider healthBar;
 
+    public GameObject CBTprefab;
 
     public MonoBehaviour[] scriptsToDisable;
 
@@ -84,6 +85,7 @@ public class CharacterStats : MonoBehaviour
     {
         health -= damage;
         healthBar.value = health;
+        InitCBT(damage.ToString());
         
 
     }
@@ -118,4 +120,17 @@ public class CharacterStats : MonoBehaviour
 		}
     }
 
+    void InitCBT(string text)
+    {
+        GameObject temp = Instantiate(CBTprefab) as GameObject;
+        RectTransform tempRect = temp.GetComponent<RectTransform>();
+        temp.transform.SetParent(transform.FindChild("EnemyCanvas"));
+        tempRect.transform.localPosition = CBTprefab.transform.localPosition;
+        tempRect.transform.localScale = CBTprefab.transform.localScale;
+        tempRect.transform.localRotation = CBTprefab.transform.localRotation;
+
+        temp.GetComponent<Text>().text = text;
+        temp.GetComponent<Animator>().SetTrigger("Hit");
+        Destroy(temp.gameObject, 2);
+    }
 }

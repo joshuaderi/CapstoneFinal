@@ -137,7 +137,6 @@
     <Compile Include="Assets\Scripts\ShopScripts\ShopController.cs" />
     <Compile Include="Assets\Scripts\ShopScripts\ShopScript.cs" />
     <Compile Include="Assets\Scripts\Sound.cs" />
-    <Compile Include="Assets\Scripts\SpawnEnemies.cs" />
     <Compile Include="Assets\Scripts\UIScripts\ChangeColor.cs" />
     <Compile Include="Assets\Scripts\UIScripts\Crosshair.cs" />
     <Compile Include="Assets\Scripts\UIScripts\CrosshairManager.cs" />
